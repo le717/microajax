@@ -1,8 +1,8 @@
 /*global XMLHttpRequest */
 
 /*
- * microAjax
- * Created 2015 Triangle717
+ * microAjax.js
+ * Created 2015-2016 Triangle717
  * <http://le717.github.io/>
  *
  * Licensed under The MIT License
