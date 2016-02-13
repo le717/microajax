@@ -44,11 +44,6 @@ function microAjax(options) {
 
   var request = new XMLHttpRequest();
   request.open(options.method, options.url, true);
-
-  // Send the POST header if needed
-  if (options.method.toLowerCase() === "post") {
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-  }
   request.send(options.data);
 
   request.onload = function() {
