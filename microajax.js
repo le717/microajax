@@ -1,9 +1,8 @@
 /*global XMLHttpRequest */
 
 /*
- * microAjax.js
- * Created 2015-2016 Triangle717
- * <http://le717.github.io/>
+ * Created 2015-2016 Caleb Ely
+ * <http://CodeTriangle.me>
  *
  * Licensed under The MIT License
  * <http://opensource.org/licenses/MIT/>
