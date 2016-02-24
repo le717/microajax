@@ -8,11 +8,12 @@ I needed a way to perform an AJAX request to the backend. Because the assignment
 Since then, multiple times I have reused the script each time I needed to perform an AJAX request. I finally became tired of remembering where I put the script on my computer or having to redownload it. That is why I created this repo and posted it here. Who knows, maybe it will come in handy for you too.
 
 ## Usage ##
-1. Load onto your site
+* Load onto your site
 ```html
 <script src="microajax.min.js"</script>
 ```
-2. Call `microAjax()`, supplying the required parameters.
+
+* Call `microAjax()`, supplying the required parameters.
 ```js
 microAjax("http://example.com", {
   method: "GET",
@@ -27,11 +28,13 @@ microAjax("http://example.com", {
 * `options.data` (*): The request body.
 * `options.headers` (object, optional): Any headers required for the request,
    given in the format
+
    ```js
    {
      "header-name": "value"
-  }
-    ```
+   }
+   ```
+
 * `options.method` (string, optional): The request method. Defaults to GET.
 * `options.ajaxMethod` (string, optional):The API method to use in the request.
    Possible values are "fetch" and "xhr".
