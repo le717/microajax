@@ -7,7 +7,7 @@ I needed a way to perform an AJAX request to the backend. Because the assignment
 
 Since then, I have reused the script multiple times when I needed to perform an AJAX request. I finally became tired of remembering where I put the script on my computer or having to redownload it. That is why I created this repo and posted it here. Who knows, maybe it will be handy to you too.
 
-As of version 2.0.0, the script automatically will use the [Fetch API](https://fetch.spec.whatwg.or g/) to perform requests, falling back to XMLHttpRequest when Fetch is not detected. The paticular API to be used can be forced through the parameters.
+As of version 2.0.0, the script automatically will use the [Fetch API](https://fetch.spec.whatwg.org/) to perform requests, falling back to XMLHttpRequest when Fetch is not detected. The paticular API to be used can be forced through the parameters.
 
 ## Usage ##
 * Load onto your site
