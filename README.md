@@ -12,16 +12,31 @@ Since then, multiple times I have reused the script each time I needed to perfor
 ```html
 <script src="microajax.min.js"</script>
 ```
-2. Call `microAjax()`, supplying the required `options` object.
+2. Call `microAjax()`, supplying the required parameters.
 ```js
-microAjax({
-  url: "http://example.com",
+microAjax("http://example.com", {
   method: "GET",
   success: /* Successful request callback */,
-  warning: /* Request warning callback */,
   error: /* Request error callback */
 });
 ```
+
+## Parameter Documentation ##
+* `url` (string): The URL for the request.
+* `options` (object): The request details and options.
+* `options.data` (*): The request body.
+* `options.headers` (object, optional): Any headers required for the request,
+   given in the format
+   ```js
+   {
+     "header-name": "value"
+  }
+    ```
+* `options.method` (string, optional): The request method. Defaults to GET.
+* `options.ajaxMethod` (string, optional):The API method to use in the request.
+   Possible values are "fetch" and "xhr".
+* `options.success` (function): Request success callback.
+* `options.error` (function): Request error callback.
 
 ## License ##
 [MIT](LICENSE)
