@@ -29,22 +29,19 @@ var microAjax = (function() {
       }
     }
 
-    // Make the request
-    request.send(options.data);
-
     request.onload = function() {
       // Success!
       if (request.readyState === 4 && request.status === 200) {
-        options.success(request.responseText);
+        options.success(request.response);
 
         // We reached our target destination, but it returned an error
       } else {
-        options.error();
+        options.error(request);
       }
     };
 
-    // There was a connection error of some sort
-    request.onerror = options.error();
+    // Make the request
+    request.send(options.data);
   }
 
 
