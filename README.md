@@ -1,4 +1,4 @@
-# microAjax.js #
+# microajax #
 > A small AJAX-performing script.
 
 ## History ##
