@@ -59,5 +59,5 @@ function microAjax(options) {
   };
 
   // There was a connection error of some sort
-  request.onerror = options.error();
+  request.onerror = options.error;
 }
