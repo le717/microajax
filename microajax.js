@@ -25,20 +25,18 @@ function microAjax(options) {
   "use strict";
 
   // Default to GET
-  if (options.method === undefined) {
+  if (!options.method) {
     options.method = "GET";
   }
 
-  // Define empty functions for the callbacks
+  // Default empty functions for the callbacks
   function noop() {}
   if (!options.success) {
     options.success = noop;
   }
-
   if (!options.warning) {
     options.warning = noop;
   }
-
   if (!options.error) {
     options.error = noop;
   }
