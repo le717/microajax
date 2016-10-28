@@ -1,9 +1,9 @@
 /*global XMLHttpRequest */
 
 /*
- * microAjax.js
- * Created 2015-2016 Triangle717
- * <http://le717.github.io/>
+ * microAjax
+ * Created 2015-2016 Caleb Ely
+ * <http://CodeTri.net>
  *
  * Licensed under The MIT License
  * <http://opensource.org/licenses/MIT/>
@@ -12,8 +12,8 @@
 
 /**
  * Perform a simple async AJAX request.
- * @param {Object} options.<[method=POST], url, data,
- *                                         [success=function], [warning=function], [error=function]>
+ * @param {Object} options.<[method=GET], url, data,
+ *                                        [success=function], [warning=function], [error=function]>
  *                 method: GET or POST.
  *                 url: The URL to contact.
  *                 data: the content to send to the page.
@@ -24,22 +24,21 @@
 function microAjax(options) {
   "use strict";
 
-  // Default to POST
-  if (options.method === undefined) {
-    options.method = "POST";
+  // Default to GET
+  if (!options.method) {
+    options.method = "GET";
   }
 
-  // Define empty functions for the callbacks
-  if (options.success === undefined) {
-    options.success = function() {};
+  // Default empty functions for the callbacks
+  function noop() {}
+  if (!options.success) {
+    options.success = noop;
   }
-
-  if (options.warning === undefined) {
-    options.warning = function() {};
+  if (!options.warning) {
+    options.warning = noop;
   }
-
-  if (options.error === undefined) {
-    options.error = function() {};
+  if (!options.error) {
+    options.error = noop;
   }
 
   var request = new XMLHttpRequest();
@@ -58,5 +57,5 @@ function microAjax(options) {
   };
 
   // There was a connection error of some sort
-  request.onerror = options.error();
+  request.onerror = options.error;
 }
